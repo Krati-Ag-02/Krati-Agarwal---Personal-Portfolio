@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export default function Certifications() {
 
   const data = [
@@ -16,15 +17,27 @@ export default function Certifications() {
   return (
     <section id="certifications" className="section">
 
-      <h2 className="section-title">CERTIFICATIONS</h2>
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        CERTIFICATIONS
+      </motion.h2>
 
-      <div className="grid grid-2">
+      <div className="grid">
         {data.map((c,i)=>(
-          <div key={i} className="card">
+          <motion.div
+            key={i}
+            className="card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
             <h3>{c.title}</h3>
             <p>{c.org}</p>
             <p>{c.year}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 

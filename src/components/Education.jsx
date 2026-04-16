@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { FaGraduationCap } from "react-icons/fa";
 export default function Education() {
 
   const data = [
@@ -24,19 +26,32 @@ export default function Education() {
   return (
     <section id="education" className="section">
 
-      <h2 className="section-title">EDUCATION</h2>
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        EDUCATION
+      </motion.h2>
 
-      <div className="grid grid-2">
-
+      <div className="grid">
         {data.map((e,i)=>(
-          <div key={i} className="card">
-            <h3>{e.title}</h3>
+          <motion.div
+            key={i}
+            className="card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <h3>
+  <FaGraduationCap style={{ marginRight: "8px" }} />
+  {e.title}
+</h3>
             <p>{e.place}</p>
             <p>{e.duration}</p>
-            <p >{e.score}</p>
-          </div>
+            <p>{e.score}</p>
+          </motion.div>
         ))}
-
       </div>
 
     </section>

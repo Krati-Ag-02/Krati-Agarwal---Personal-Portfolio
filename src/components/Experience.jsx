@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { FaBriefcase } from "react-icons/fa";
 export default function Experience() {
 
   const data = [
@@ -16,25 +18,37 @@ export default function Experience() {
   return (
     <section id="experience" className="section">
 
-      <h2 className="section-title">EXPERIENCE</h2>
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        EXPERIENCE
+      </motion.h2>
 
       <div className="grid">
-
         {data.map((exp,i)=>(
-          <div key={i} className="card">
-
-            <h3>{exp.role}</h3>
+          <motion.div
+            key={i}
+            className="card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <h3>
+  <FaBriefcase style={{ marginRight: "8px" }} />
+  {exp.role}
+</h3>
             <p>{exp.company} • {exp.duration}</p>
 
-            <ul >
+            <ul>
               {exp.points.map((p,j)=>(
                 <li key={j}>{p}</li>
               ))}
             </ul>
 
-          </div>
+          </motion.div>
         ))}
-
       </div>
 
     </section>

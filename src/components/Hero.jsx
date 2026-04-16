@@ -1,20 +1,67 @@
+import { motion } from "framer-motion";
 export default function Hero() {
   return (
-    <section className="section hero" >
-      <h1 className="hero-name">Krati Agarwal</h1>
+    <section className="hero">
 
-      <p className="hero-role">
-  Frontend Developer • Continuously Learning & Building in Web Development
-</p>
+      <div className="hero-container">
 
-      <p className="hero-desc">
-        I build elegant, responsive, and interactive web experiences with a focus on design and usability.
-      </p>
+        {/* LEFT */}
+        <div className="hero-content">
+          <motion.h1
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="hero-name"
+          >
+            KRATI AGARWAL
+          </motion.h1>
 
-      <div>
-        <a href="/Resume_Krati.pdf" className="btn">Resume</a>
-        <a href="https://linkedin.com/in/kratiagarwal03" className="btn">LinkedIn</a>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="hero-role"
+          >
+            Frontend Developer • Aspiring Web Developer
+          </motion.h2>
+
+          <motion.p
+            className="hero-desc"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
+            I build modern, responsive and visually appealing web applications
+            focused on performance and user experience.
+          </motion.p>
+
+          <motion.div
+            className="hero-buttons"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9 }}
+          >
+            <a href="#projects" className="btn">
+              View Work
+            </a>
+
+            <a href="/Resume_Krati.pdf" className="btn">
+              Resume
+            </a>
+          </motion.div>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          className="hero-image"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+        >
+          <img src="/profile.jpg" alt="profile" />
+        </motion.div>
+
       </div>
+
     </section>
   );
 }

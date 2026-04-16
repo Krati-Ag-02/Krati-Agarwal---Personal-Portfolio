@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export default function Navbar() {
 
   const links = ["about","education","certifications","experience","projects","skills","interests","contact"];
