@@ -87,7 +87,7 @@ const projects = [
       "Designed to highlight creativity, responsiveness, and UI consistency."
     ],
     tech: ["React", "CSS", "HTML","JavaScript"],
-    live: "https://krati-ag-02.github.io/Krati-Agarwal---Personal-Portfolio/",
+    live: "krati-agarwal-personal-portfolio.vercel.app",
     image: "/port.png"
   }
 ];
