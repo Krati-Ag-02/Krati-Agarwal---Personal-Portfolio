@@ -88,7 +88,7 @@ const projects = [
     ],
     tech: ["React", "CSS", "HTML","JavaScript"],
     live: "https://krati-ag-02.github.io/Krati-Agarwal---Personal-Portfolio/",
-    image: ""
+    image: "/port.png"
   }
 ];
 
