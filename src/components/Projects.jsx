@@ -4,12 +4,11 @@ const projects = [
   {
     title: "CareerGenie (Full Stack)",
     desc: [
-  "A full-stack AI-powered career guidance platform for interview preparation, resume analysis, and career recommendations.",
-  "Built backend using Node.js and Express with Firebase integration for data storage and user management.",
-  "Integrated LLM APIs to generate interview questions, evaluate answers with feedback, and provide personalized career guidance.",
-  "Designed resume analysis module providing improvement suggestions and insights.",
-  "Developed responsive frontend using React for seamless user experience.",
-  "Deployed the application on Render for live access."
+  "AI-powered platform for interview prep, resume analysis, and career guidance.",
+  "Built full-stack app using React, Node.js, Express, and Firebase.",
+  "Used LLM APIs to generate questions and evaluate answers with feedback.",
+  "Developed resume analysis with improvement suggestions.",
+  "Designed responsive UI and deployed on Render."
 ],
     tech: ["React", "JavaScript", "Node.js", "Express", "Firebase"],
     live:  "https://careergenie-frontend.onrender.com/",
