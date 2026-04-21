@@ -4,14 +4,16 @@ const projects = [
   {
     title: "CareerGenie (Full Stack)",
     desc: [
-      "A full-stack career guidance platform focused on resume building and interview preparation.",
-      "Developed backend using Node.js and Express with Firebase authentication integration.",
-      "Designed modules for resume generation, user interaction, and career assistance workflows."
-    ],
-    tech: ["HTML", "CSS", "JS", "Node.js", "Express", "Firebase"],
-    live: "https://github.com/Krati-Ag-02/CareerGenie/tree/main",
-    github: "https://careergenie-9ja9.onrender.com",
-    image: ""
+  "A full-stack AI-powered career guidance platform for interview preparation, resume analysis, and career recommendations.",
+  "Built backend using Node.js and Express with Firebase integration for data storage and user management.",
+  "Integrated LLM APIs to generate interview questions, evaluate answers with feedback, and provide personalized career guidance.",
+  "Designed resume analysis module providing improvement suggestions and insights.",
+  "Developed responsive frontend using React for seamless user experience.",
+  "Deployed the application on Render for live access."
+],
+    tech: ["React", "JavaScript", "Node.js", "Express", "Firebase"],
+    live:  "https://careergenie-frontend.onrender.com/",
+    image: "/cg.png"
   },
   {
     title: "Finance Dashboard",
@@ -86,9 +88,20 @@ const projects = [
       "Built using React with focus on reusable components and clean structure.",
       "Designed to highlight creativity, responsiveness, and UI consistency."
     ],
-    tech: ["React", "CSS", "HTML","JavaScript"],
+    tech: ["React", "CSS","JavaScript"],
     live: "krati-agarwal-personal-portfolio.vercel.app",
     image: "/port.png"
+  },
+  {
+    title: "BizBucks Landing Page",
+   desc: [
+  "Developed a responsive landing page using React with a clean and modern UI.",
+  "Built reusable components and structured layout for better maintainability.",
+  "Implemented responsive design and deployed the project on Vercel."
+],
+    tech: ["React", "CSS", "JS"],
+    live: "https://biz-bucks-landing-page.vercel.app/",
+    image: "/bb.png"
   }
 ];
 
