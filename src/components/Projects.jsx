@@ -101,6 +101,18 @@ const projects = [
     tech: ["React", "CSS", "JS"],
     live: "https://biz-bucks-landing-page.vercel.app/",
     image: "/bb.png"
+  },
+  {
+    title: "Full-Stack Task Manager",
+  desc: [
+    "Developed a full-stack task management application using React (Vite) and Node.js (Express).",
+    "Implemented task features including add, delete, priority selection, due dates, and categorized sections.",
+    "Designed a responsive and theme-based UI with multiple visual styles and smooth user interactions.",
+    "Integrated REST APIs with frontend and deployed the application with a live working link."
+  ],
+  tech: ["React", "Node.js", "Express", "CSS", "JavaScript"],
+    live: "https://task-manager-1-6zus.onrender.com/",
+    image: "/tm.png"
   }
 ];
 
