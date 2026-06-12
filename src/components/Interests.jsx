@@ -1,35 +1,48 @@
 import { motion } from "framer-motion";
 import { FaPencilAlt, FaPaintBrush } from "react-icons/fa";
-export default function Interests() {
 
+export default function Interests() {
   const data = [
-  { name: "Pencil Sketching", icon: <FaPencilAlt /> },
-  { name: "Oil Pastel Painting", icon: <FaPaintBrush /> }
-];
+    {
+      name: "Pencil Sketching",
+      icon: <FaPencilAlt />,
+      desc: "I sketch portraits and detailed illustrations as a way to slow down and focus.",
+    },
+    {
+      name: "Oil Pastel Painting",
+      icon: <FaPaintBrush />,
+      desc: "Experimenting with color and texture through oil pastel artwork.",
+    },
+  ];
 
   return (
     <section id="interests" className="section">
 
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 40 }}
+      <motion.div
+        className="section-header"
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
       >
-        INTERESTS
-      </motion.h2>
+        <p className="section-eyebrow">Beyond code</p>
+        <h2 className="section-title">Inter<span>ests</span></h2>
+      </motion.div>
 
       <div className="grid">
-        {data.map((i,index)=>(
+        {data.map((item, i) => (
           <motion.div
-            key={index}
+            key={i}
             className="card"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
           >
-            <h3 className="interest-item">
-  {i.icon} {i.name}
-</h3>
+            <div className="interest-item">
+              {item.icon}
+              {item.name}
+            </div>
+            <p style={{ fontSize: "15px", marginTop: "8px" }}>{item.desc}</p>
           </motion.div>
         ))}
       </div>

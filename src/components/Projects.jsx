@@ -1,179 +1,220 @@
 import { motion } from "framer-motion";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
+
 const projects = [
   {
-    title: "CareerGenie (Full Stack)",
+    title: "CareerGenie",
+    subtitle: "AI Career Platform",
     desc: [
-  "AI-powered platform for interview prep, resume analysis, and career guidance.",
-  "Built full-stack app using React, Node.js, Express, and Firebase.",
-  "Used LLM APIs to generate questions and evaluate answers with feedback.",
-  "Developed resume analysis with improvement suggestions.",
-  "Designed responsive UI and deployed on Render."
-],
-    tech: ["React", "JavaScript", "Node.js", "Express", "Firebase"],
-    live:  "https://careergenie-frontend.onrender.com/",
-    image: "/cg.png"
+      "AI-powered platform for interview prep, resume analysis, and career guidance.",
+      "Integrated LLM APIs to generate interview questions and evaluate answers in real time.",
+      "Built full-stack with React, Node.js, Express, Firebase. Deployed on Render.",
+    ],
+    tech: ["React", "Node.js", "Express", "Firebase", "LLM APIs"],
+    live: "https://careergenie-frontend.onrender.com/",
+    image: "/cg.png",
+    featured: true,
+  },
+  {
+    title: "Full-Stack Task Manager",
+    subtitle: "Productivity App",
+    desc: [
+      "Task management app with add, delete, priority selection, due dates, and categories.",
+      "Theme-based UI with multiple visual styles and smooth user interactions.",
+      "REST API integrated with React frontend. Deployed live.",
+    ],
+    tech: ["React", "Node.js", "Express", "CSS"],
+    live: "https://task-manager-1-6zus.onrender.com/",
+    image: "/tm.png",
+    featured: true,
+  },
+  {
+    title: "BizBucks Landing Page",
+    subtitle: "React UI",
+    desc: [
+      "Responsive landing page with reusable components and clean modern UI.",
+      "Structured layout for maintainability. Deployed on Vercel.",
+    ],
+    tech: ["React", "CSS", "JS"],
+    live: "https://biz-bucks-landing-page.vercel.app/",
+    image: "/bb.png",
   },
   {
     title: "Finance Dashboard",
+    subtitle: "Data UI",
     desc: [
-      "An interactive dashboard UI designed to visualize financial data effectively.",
-      "Focused on clean layout, responsiveness, and user-friendly data presentation.",
-      "Implemented dynamic UI components using JavaScript."
+      "Interactive dashboard to visualize financial data with clean layout and responsiveness.",
+      "Dynamic UI components using JavaScript.",
     ],
     tech: ["HTML", "CSS", "JS"],
     live: "https://krati-ag-02.github.io/Finance-Dashboard/",
-    image: "/fd.png"
+    image: "/fd.png",
+  },
+  {
+    title: "Institute of Digital Risk",
+    subtitle: "Business Website",
+    desc: [
+      "Responsive website for an institute showcasing services and information.",
+      "Focused on layout structuring and clean UI across screen sizes.",
+    ],
+    tech: ["HTML", "CSS", "JS"],
+    live: "https://krati-ag-02.github.io/Institute-of-Digital-Risk-Website/",
+    image: "/idr.png",
+  },
+  {
+    title: "Spotify UI Clone",
+    subtitle: "Frontend Practice",
+    desc: [
+      "Static clone of Spotify's UI layout for frontend design and responsiveness practice.",
+    ],
+    tech: ["HTML", "CSS"],
+    live: "https://krati-ag-02.github.io/spotify-UI/",
+    image: "/spotify.png",
   },
   {
     title: "Color Memory Game",
+    subtitle: "Browser Game",
     desc: [
-      "A browser-based memory game that challenges users to remember color sequences.",
-      "Improves logic-building and user interaction using JavaScript.",
+      "Memory game that challenges users to remember color sequences.",
       "Built with focus on smooth gameplay and responsive design.",
     ],
     tech: ["HTML", "CSS", "JS"],
     live: "https://krati-ag-02.github.io/Color-Memory-Challenge-Game/",
-    image: "/colormem.png"
-  },
-  {
-    title: "Institute of Digital Risk Website",
-    desc: [
-      "A responsive website developed for an institute to showcase its services and information.",
-      "Focused on layout structuring and clean UI design.",
-      "Ensured responsiveness across multiple screen sizes."
-    ],
-    tech: ["HTML", "CSS", "JS"],
-    live: "https://krati-ag-02.github.io/Institute-of-Digital-Risk-Website/",
-    image: "/idr.png"
-  },
-  {
-    title: "Spotify UI Clone",
-    desc: [
-      "A static clone of Spotify's UI focusing on layout and design replication.",
-      "Practiced modern CSS styling and component structuring.",
-      "Built to improve frontend design and responsiveness skills."
-    ],
-    tech: ["HTML", "CSS"],
-    live: "https://krati-ag-02.github.io/spotify-UI/",
-    image: "/spotify.png"
+    image: "/colormem.png",
   },
   {
     title: "Get Jokes",
+    subtitle: "API Project",
     desc: [
-      "A fun API-based project that fetches and displays random jokes.",
-      "Integrated external API using JavaScript fetch.",
-      "Focused on asynchronous programming and UI updates."
+      "Fetches and displays random jokes using an external API with async JavaScript.",
     ],
     tech: ["HTML", "CSS", "JS"],
     live: "https://krati-ag-02.github.io/get-jokes/",
-    image: "/joke.png"
+    image: "/joke.png",
   },
   {
     title: "Get Quotes",
+    subtitle: "API Project",
     desc: [
-      "A quotes generator that fetches motivational quotes using APIs.",
-      "Implemented dynamic content rendering using JavaScript.",
-      "Designed simple and clean UI for better readability."
+      "Motivational quotes generator using API fetch and dynamic content rendering.",
     ],
     tech: ["HTML", "CSS", "JS"],
     live: "https://krati-ag-02.github.io/get-quotes/",
-    image: "/quote.png"
+    image: "/quote.png",
   },
-  {
-    title: "Portfolio Website",
-    desc: [
-      "A personal portfolio website showcasing projects, skills, and experience.",
-      "Built using React with focus on reusable components and clean structure.",
-      "Designed to highlight creativity, responsiveness, and UI consistency."
-    ],
-    tech: ["React", "CSS","JavaScript"],
-    live: "krati-agarwal-personal-portfolio.vercel.app",
-    image: "/port.png"
-  },
-  {
-    title: "BizBucks Landing Page",
-   desc: [
-  "Developed a responsive landing page using React with a clean and modern UI.",
-  "Built reusable components and structured layout for better maintainability.",
-  "Implemented responsive design and deployed the project on Vercel."
-],
-    tech: ["React", "CSS", "JS"],
-    live: "https://biz-bucks-landing-page.vercel.app/",
-    image: "/bb.png"
-  },
-  {
-    title: "Full-Stack Task Manager",
-  desc: [
-    "Developed a full-stack task management application using React (Vite) and Node.js (Express).",
-    "Implemented task features including add, delete, priority selection, due dates, and categorized sections.",
-    "Designed a responsive and theme-based UI with multiple visual styles and smooth user interactions.",
-    "Integrated REST APIs with frontend and deployed the application with a live working link."
-  ],
-  tech: ["React", "Node.js", "Express", "CSS", "JavaScript"],
-    live: "https://task-manager-1-6zus.onrender.com/",
-    image: "/tm.png"
-  }
 ];
 
 export default function Projects() {
-  return (
-    <section  id="projects" className="section">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-      >
-        Projects
-      </motion.h2>
+  const featured = projects.filter((p) => p.featured);
+  const rest = projects.filter((p) => !p.featured);
 
-      <div className="grid">
-        {projects.map((project, index) => (
+  return (
+    <section id="projects" className="section">
+
+      <motion.div
+        className="section-header"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <p className="section-eyebrow">What I've built</p>
+        <h2 className="section-title">My <span>Projects</span></h2>
+      </motion.div>
+
+      {/* FEATURED — 2 col wide */}
+      <div className="grid-2" style={{ marginBottom: "20px" }}>
+        {featured.map((project, index) => (
           <motion.div
             className="card"
             key={project.title}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
           >
+            {project.image ? (
+              <img src={project.image} className="project-img" alt={project.title} />
+            ) : (
+              <div className="project-placeholder"><FaCode size={28} /></div>
+            )}
 
-           {project.image ? (
-  <img src={project.image} className="project-img" />
-) : (
-  <div className="project-placeholder">
-    <FaCode size={28} />
-  </div>
-)}
-
-            <h3>
-              <FaCode style={{ marginRight: "8px" }} />
-              {project.title}
-            </h3>
+            <div>
+              <p style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "var(--accent)", marginBottom: "4px", letterSpacing: "1px" }}>
+                FEATURED · {project.subtitle}
+              </p>
+              <h3><FaCode />{project.title}</h3>
+            </div>
 
             <div className="project-desc">
               {project.desc.map((line, i) => (
-                <p key={i}>• {line}</p>
+                <p key={i}>▹ {line}</p>
               ))}
             </div>
 
-            <div className="tech-stack">
-              {project.tech.map((tech, i) => (
-                <span className="tag" key={i}>{tech}</span>
+            <div className="tags-wrap">
+              {project.tech.map((t, i) => (
+                <span className="tag" key={i}>{t}</span>
+              ))}
+            </div>
+
+            <div className="project-buttons">
+              {project.live && (
+                <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  <FaExternalLinkAlt size={12} /> Live Demo
+                </a>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* REST — 3 col grid */}
+      <div className="grid">
+        {rest.map((project, index) => (
+          <motion.div
+            className="card"
+            key={project.title}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.07 }}
+          >
+            {project.image ? (
+              <img src={project.image} className="project-img" alt={project.title} />
+            ) : (
+              <div className="project-placeholder"><FaCode size={22} /></div>
+            )}
+
+            <div>
+              <p style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "11px", color: "var(--text-muted)", marginBottom: "4px" }}>
+                {project.subtitle}
+              </p>
+              <h3 style={{ fontSize: "18px" }}><FaCode />{project.title}</h3>
+            </div>
+
+            <div className="project-desc">
+              {project.desc.map((line, i) => (
+                <p key={i}>▹ {line}</p>
+              ))}
+            </div>
+
+            <div className="tags-wrap">
+              {project.tech.map((t, i) => (
+                <span className="tag" key={i}>{t}</span>
               ))}
             </div>
 
             <div className="project-buttons">
               {project.live && (
                 <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn">
-                  Live
+                  <FaExternalLinkAlt size={11} /> Live
                 </a>
               )}
-              
             </div>
-
           </motion.div>
         ))}
       </div>
+
     </section>
   );
 }

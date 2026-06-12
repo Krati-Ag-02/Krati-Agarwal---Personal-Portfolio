@@ -1,67 +1,76 @@
 import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
     <section className="hero">
-
       <div className="hero-container">
 
-        {/* LEFT */}
+        {/* LEFT CONTENT */}
         <div className="hero-content">
-          <motion.h1
-            initial={{ opacity: 0, y: 60 }}
+
+          <motion.div
+            className="hero-badge"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="hero-name"
+            transition={{ duration: 0.5 }}
           >
-            KRATI AGARWAL
+            <span className="hero-badge-dot" />
+            Open to paid opportunities
+          </motion.div>
+
+          <motion.h1
+            className="hero-name"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            Krati <em>Agarwal</em>
           </motion.h1>
 
-          <motion.h2
+          <motion.p
+            className="hero-role"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="hero-role"
+            transition={{ delay: 0.35 }}
           >
-            Frontend Developer • Aspiring Web Developer
-          </motion.h2>
+            Full Stack Developer &nbsp;·&nbsp; React &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; Firebase
+          </motion.p>
 
           <motion.p
             className="hero-desc"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0 }}
           >
-            I build modern, responsive and visually appealing web applications
-            focused on performance and user experience.
+            I build scalable, responsive web apps — from clean frontend interfaces
+            to full-stack products with real users. Currently shipping features at
+            Vrutsa Solutions.
           </motion.p>
 
           <motion.div
             className="hero-buttons"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
+            transition={{ delay: 0.65 }}
           >
-            <a href="#projects" className="btn">
-              View Work
-            </a>
-
-            <a href="/Resume_Krati.pdf" className="btn">
-              Resume
-            </a>
+            <a href="#projects" className="btn btn-primary">View Work</a>
+            <a href="/Resume_Krati.pdf" className="btn" target="_blank" rel="noopener noreferrer">Download Resume</a>
+            <a href="#contact" className="btn">Contact Me</a>
           </motion.div>
+
         </div>
 
         {/* RIGHT IMAGE */}
         <motion.div
-          className="hero-image"
-          initial={{ opacity: 0, scale: 0.8 }}
+          className="hero-image-wrap"
+          initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src="/profile.jpg" alt="profile" />
+          <img src="/my.jpeg" alt="Krati Agarwal" />
         </motion.div>
 
       </div>
-
     </section>
   );
 }
