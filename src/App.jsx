@@ -9,6 +9,8 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Interests from "./components/Interests";
 import Contact from "./components/Contact";
+import CustomCursor from "./components/CustomCursor";
+import ScrollProgress from "./components/ScrollProgress";
 import { useEffect } from "react";
 export default function App() {
 
@@ -38,6 +40,10 @@ useEffect(() => {
   return (
     
     <>
+       <CustomCursor />
+      <ScrollProgress />
+      <div className="grain" />
+      <div className="hero-glow" />
       <Navbar />
       <Hero />
       <About />
