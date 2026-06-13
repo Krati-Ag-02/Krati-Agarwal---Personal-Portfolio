@@ -13,7 +13,7 @@ const projects = [
     color: "var(--accent)",
   },
   {
-    title: "Full-Stack Task Manager",
+    title: "Task Manager",
     subtitle: "Productivity App",
     desc: "Complete task management app with priorities, due dates, categories, and theme switcher. REST API backend with React frontend, deployed live on Render.",
     tech: ["React", "Node.js", "Express", "CSS"],
