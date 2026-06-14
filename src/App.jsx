@@ -42,7 +42,7 @@ useEffect(() => {
     <>
        <CustomCursor />
       <ScrollProgress />
-      <div className="grain" />
+      
       <div className="hero-glow" />
       <Navbar />
       <Hero />
