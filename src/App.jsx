@@ -16,6 +16,14 @@ export default function App() {
 
 
 useEffect(() => {
+  const onParallax = () => {
+    document.body.style.setProperty("--grid-shift", `${window.scrollY * 0.06}px`);
+  };
+  window.addEventListener("scroll", onParallax, { passive:true });
+  return () => window.removeEventListener("scroll", onParallax);
+}, []);
+
+useEffect(() => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -42,7 +50,11 @@ useEffect(() => {
     <>
        <CustomCursor />
       <ScrollProgress />
-      
+      <div className="blueprint-frame">
+        <span className="bp-tl" /><span className="bp-tr" />
+        <span className="bp-bl" /><span className="bp-br" />
+      </div>
+
       <div className="hero-glow" />
       <Navbar />
       <Hero />

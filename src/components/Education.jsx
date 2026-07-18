@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
 
 const data = [
-  { title:"B.Tech – Computer Science", place:"JECRC University, Jaipur", duration:"2022 – 2026", score:"77%" },
+  { title:"B.Tech – Computer Science", place:"JECRC University, Jaipur", duration:"2022 – 2026", score:"80%" },
   { title:"Senior Secondary (XII)", place:"SRGMSS School, Agra", duration:"2022", score:"79%" },
   { title:"Secondary (X)", place:"SRGMSS School, Agra", duration:"2020", score:"85%" },
 ];

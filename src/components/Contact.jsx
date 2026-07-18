@@ -56,6 +56,7 @@ export default function Contact() {
       <p className="contact-footer">
         Designed & built by Krati Agarwal · React · Deployed on Vercel
       </p>
+      <p className="contact-signature">— Krati</p>
     </section>
   );
 }
