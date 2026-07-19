@@ -47,14 +47,6 @@ const projects = [
     image: "/idr.png",
   },
   {
-    title: "Spotify UI Clone",
-    subtitle: "Frontend Clone",
-    desc: "Pixel-accurate Spotify UI clone to practice layout replication, CSS techniques and responsive design.",
-    tech: ["HTML", "CSS"],
-    live: "https://krati-ag-02.github.io/spotify-UI/",
-    image: "/spotify.png",
-  },
-  {
     title: "Color Memory Game",
     subtitle: "Browser Game",
     desc: "Colour sequence memory game built with vanilla JS. Focused on smooth gameplay and responsive design.",
