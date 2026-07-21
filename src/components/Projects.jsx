@@ -16,11 +16,35 @@ const projects = [
     title: "Planara",
     subtitle: "Productivity App",
     desc: "Full-stack productivity suite with a drag-and-drop Kanban board, calendar, habit tracker, goals, and a Pomodoro timer. Real-time sync via Firebase Auth and Firestore, deployed live on Vercel.",
-    tech: ["React", "CSS","Firebase"],
+    tech: ["React", "CSS", "Firebase"],
     live: "https://planara-six.vercel.app/",
     image: "/planara.png",
     featured: true,
     color: "var(--green)",
+  },
+  {
+    title: "Finance Dashboard",
+    subtitle: "Financial Analytics & Visualization",
+    desc: "Interactive dashboard built with React and Recharts featuring real-time financial tracking, cashflow visualizations, category-wise spending progress bars, dynamic income/expense filtering, and dark/light themes.",
+    tech: ["React", "CSS"],
+    live: "https://finance-dashboard-two-flax.vercel.app/",
+    image: "/fd.png",
+  },
+  {
+    title: "SparkVerse",
+    subtitle: "API Content Hub",
+    desc: "An interactive web application that fetches dynamic content like quotes, jokes, riddles, and trivia from multiple external APIs into a single interface, featuring bookmarking and content sharing.",
+    tech: ["React", "REST APIs", "CSS"],
+    live: "https://sparkverse-plum.vercel.app/",
+    image: "/Sparkverse.png",
+  },
+  {
+    title: "Chromatic",
+    subtitle: "Memory Game App",
+    desc: "A color sequence memory game built with interactive sound effects, multiple game modes (Classic, Reverse, Speed Rush), round/streak score tracking, and a colorblind visual mode.",
+    tech: ["React", "JavaScript", "CSS"],
+    live: "https://chromatic-delta-seven.vercel.app/",
+    image: "/Chromatic.png",
   },
   {
     title: "BizBucks Landing Page",
@@ -29,46 +53,6 @@ const projects = [
     tech: ["React", "CSS", "JS"],
     live: "https://biz-bucks-landing-page.vercel.app/",
     image: "/bb.png",
-  },
-  {
-    title: "Finance Dashboard",
-    subtitle: "Data Visualization",
-    desc: "Interactive dashboard with dynamic UI components for visualizing financial data. Focused on responsiveness and clean layout.",
-    tech: ["HTML", "CSS", "JS"],
-    live: "https://krati-ag-02.github.io/Finance-Dashboard/",
-    image: "/fd.png",
-  },
-  {
-    title: "Institute of Digital Risk",
-    subtitle: "Business Website",
-    desc: "Multi-section responsive website built as a hiring assignment for a company's interview process — designed and coded from a client-style brief in [digital risk/cybersecurity].",
-    tech: ["HTML", "CSS", "JS"],
-    live: "https://krati-ag-02.github.io/Institute-of-Digital-Risk-Website/",
-    image: "/idr.png",
-  },
-  {
-    title: "Color Memory Game",
-    subtitle: "Browser Game",
-    desc: "Colour sequence memory game built with vanilla JS. Focused on smooth gameplay and responsive design.",
-    tech: ["HTML", "CSS", "JS"],
-    live: "https://krati-ag-02.github.io/Color-Memory-Challenge-Game/",
-    image: "/colormem.png",
-  },
-  {
-    title: "Get Jokes",
-    subtitle: "API Integration",
-    desc: "Random joke generator using asynchronous JavaScript fetch from an external API.",
-    tech: ["HTML", "CSS", "JS"],
-    live: "https://krati-ag-02.github.io/get-jokes/",
-    image: "/joke.png",
-  },
-  {
-    title: "Get Quotes",
-    subtitle: "API Integration",
-    desc: "Motivational quotes fetcher with dynamic content rendering and minimal, clean UI.",
-    tech: ["HTML", "CSS", "JS"],
-    live: "https://krati-ag-02.github.io/get-quotes/",
-    image: "/quote.png",
   },
 ];
 
@@ -89,7 +73,7 @@ function FeaturedCard({ project, index }) {
         <h3 className="pf-title">{project.title}</h3>
         <p className="pf-desc">{project.desc}</p>
         <div className="tags-wrap" style={{ marginTop:"auto", paddingTop:"12px" }}>
-          {project.tech.map((t) => <span className="tag" key={t}>{t}</span>)}
+          {(project.tech || []).map((t) => <span className="tag" key={t}>{t}</span>)}
         </div>
         {project.live && (
           <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary pf-btn">
@@ -113,7 +97,7 @@ function SmallCard({ project, index }) {
       <h3 className="proj-title">{project.title}</h3>
       <p className="proj-desc">{project.desc}</p>
       <div className="tags-wrap">
-        {project.tech.map((t) => <span className="tag" key={t}>{t}</span>)}
+        {(project.tech || []).map((t) => <span className="tag" key={t}>{t}</span>)}
       </div>
       {project.live && (
         <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn proj-btn">

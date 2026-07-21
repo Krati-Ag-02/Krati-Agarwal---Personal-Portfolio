@@ -678,7 +678,7 @@ body::after {
   padding:28px; display:flex; flex-direction:column; gap:12px; flex:1; position:relative;
 }
 .pf-content::before {
-  content:"shipped ✓"; position:absolute; top:-16px; right:22px;
+ position:absolute; top:-16px; right:22px;
   font-family:'Caveat',cursive; font-weight:600; font-size:19px;
   color:var(--pencil-red); transform:rotate(-4deg);
 }
