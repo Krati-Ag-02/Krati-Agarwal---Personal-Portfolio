@@ -13,6 +13,16 @@ const projects = [
     color: "var(--accent)",
   },
   {
+  title: "Funhouse",
+  subtitle: "Mini-Games Hub",
+  desc: "A fun, interactive web app hosting a collection of 11 mini-games in one place. Built with React and CSS for the UI, integrated with Grok (AI) for smart in-game features, and Firebase Authentication + Storage for user accounts and data persistence. Deployed live on Firebase Hosting.",
+  tech: ["React", "CSS", "Firebase Auth", "Firebase Storage", "Grok API"],
+  live: "https://funhouse-f84b4.web.app/",
+  image: "/funhouse.png",
+  featured: true,
+  color: "var(--purple)",
+},
+  {
     title: "Planara",
     subtitle: "Productivity App",
     desc: "Full-stack productivity suite with a drag-and-drop Kanban board, calendar, habit tracker, goals, and a Pomodoro timer. Real-time sync via Firebase Auth and Firestore, deployed live on Vercel.",
