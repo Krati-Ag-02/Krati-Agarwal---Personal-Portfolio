@@ -1,10 +1,24 @@
-import { useEffect, useState } from "react";
-import { FaCode } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
+
+const links = ["about","experience","projects","skills","education","certifications","interests","contact"];
+
+const accent = {
+  about: "var(--sage)",
+  experience: "var(--clay)",
+  projects: "var(--slate)",
+  skills: "var(--ochre)",
+  education: "var(--sage)",
+  certifications: "var(--ochre)",
+  interests: "var(--clay)",
+  contact: "var(--slate)",
+};
 
 export default function Navbar() {
-  const links = ["about","experience","projects","skills","education","certifications","interests","contact"];
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("about");
   const [scrolled, setScrolled] = useState(false);
+  const [dotX, setDotX] = useState(0);
+  const tabRefs = useRef({});
+  const trackRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -27,20 +41,48 @@ export default function Navbar() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
+  useEffect(() => {
+    const measure = () => {
+      const tab = tabRefs.current[active];
+      const track = trackRef.current;
+      if (tab && track) {
+        const tabRect = tab.getBoundingClientRect();
+        const trackRect = track.getBoundingClientRect();
+        setDotX(tabRect.left - trackRect.left + tabRect.width / 2);
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [active, scrolled]);
+
   return (
     <nav className={`navbar${scrolled ? " navbar-scrolled" : ""}`}>
       <div className="nav-inner">
-       
-        <ul className="nav-links">
+        <a href="#hero" className="nav-brand">
+          <span className="nav-brand-mark">KA</span>
+          <span className="nav-brand-name">Krati Agarwal</span>
+        </a>
+
+        <div className="nav-track" ref={trackRef}>
+          <span className="nav-track-line" />
+          <span className="nav-dot" style={{ left: dotX, "--nav-accent": accent[active] }} />
           {links.map((l) => (
-            <li key={l}>
-              <a href={`#${l}`} className={active === l ? "active" : ""}>
-                {l.charAt(0).toUpperCase() + l.slice(1)}
-              </a>
-            </li>
-          ))}
-        </ul>
-        
+  <a
+    key={l}
+    href={`#${l}`}
+    ref={(el) => (tabRefs.current[l] = el)}
+    className={`nav-bookmark${active === l ? " active" : ""}`}
+    style={
+      active === l
+        ? { "--nav-accent": accent[l] }
+        : undefined
+    }
+  >
+    {l.charAt(0).toUpperCase() + l.slice(1)}
+  </a>
+))}
+        </div>
       </div>
     </nav>
   );

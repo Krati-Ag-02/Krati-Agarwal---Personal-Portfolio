@@ -6,6 +6,7 @@ import {
   FaProjectDiagram, FaLayerGroup,
   FaSyncAlt, FaHourglassHalf, FaClipboardList,
   FaServer, FaPencilRuler, FaUserFriends,
+  FaLanguage, FaBrain,
 } from "react-icons/fa";
 import { SiExpress, SiFirebase, SiVercel, SiCplusplus } from "react-icons/si";
 
@@ -20,14 +21,12 @@ const iconMap = {
   "Adaptability": FaSyncAlt, "Patience": FaHourglassHalf, "Organised": FaClipboardList,
 };
 
-// hub icon per category — left null where no icon felt certain enough to be "correct"
-// rather than guess; those hubs render as a plain colored circle instead.
 const categories = [
   { title: "Frontend", color: "var(--sage)", hubIcon: FaCode, items: ["HTML5", "CSS3", "JavaScript", "React", "Bootstrap", "EJS"] },
   { title: "Backend", color: "var(--clay)", hubIcon: FaServer, items: ["Node.js", "Express.js", "REST APIs", "Firebase", "DBMS"] },
   { title: "Design & tools", color: "var(--slate)", hubIcon: FaPencilRuler, items: ["Figma", "Git", "GitHub", "Vercel", "Render"] },
-  { title: "Languages", color: "var(--ochre)", hubIcon: null, items: ["C", "C++", "JavaScript"] },
-  { title: "Core CS", color: "var(--sage)", hubIcon: null, items: ["OOPs", "DSA"] },
+  { title: "Languages", color: "var(--ochre)", hubIcon: FaLanguage, items: ["C", "C++", "JavaScript"] },
+  { title: "Core CS", color: "var(--sage)", hubIcon: FaBrain, items: ["OOPs", "DSA"] },
   { title: "Soft skills", color: "var(--clay)", hubIcon: FaUserFriends, items: ["Adaptability", "Patience", "Organised"] },
 ];
 
@@ -67,7 +66,7 @@ export default function Skills() {
                     const Icon = iconMap[item] || FaCode;
                     return (
                       <span key={item} className="skill-node-item">
-                        <Icon size={12} />
+                        <Icon size={13} />
                         {item}
                       </span>
                     );
@@ -76,7 +75,7 @@ export default function Skills() {
 
                 <div className="skill-node-hub-col">
                   <div className="skill-node-hub">
-                    {HubIcon ? <HubIcon size={18} /> : null}
+                    {HubIcon ? <HubIcon size={20} /> : null}
                   </div>
                 </div>
 
@@ -85,7 +84,7 @@ export default function Skills() {
                     const Icon = iconMap[item] || FaCode;
                     return (
                       <span key={item} className="skill-node-item">
-                        <Icon size={12} />
+                        <Icon size={13} />
                         {item}
                       </span>
                     );

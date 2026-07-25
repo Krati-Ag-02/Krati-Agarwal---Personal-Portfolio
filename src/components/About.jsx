@@ -38,10 +38,7 @@ export default function About() {
             {traits.map((t) => <span key={t} className="chip">{t}</span>)}
           </div>
 
-          <div className="about-cta">
-            <a href="/Resume_Krati.pdf" className="btn btn-solid" target="_blank" rel="noopener noreferrer">Download resume ↗</a>
-            <a href="#contact" className="btn btn-outline">Let's talk</a>
-          </div>
+          
 
           <p className="quote-line" style={{ marginTop: 36 }}>
             "Programs must be written for people to read, and only incidentally for machines to execute."
