@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGraduationCap } from "react-icons/fa";
 
 const data = [
   { title: "B.Tech — Computer Science", place: "JECRC University, Jaipur", duration: "2022 – 2026", score: "7.95 CGPA", note: "final result!" },
@@ -30,10 +31,13 @@ export default function Education() {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
               <div className="edu-top">
-                <div>
+                <div className="edu-left">
+                  <div className="edu-icon"><FaGraduationCap size={16} /></div>
+                  <div>
                   <div className="edu-title">{e.title}</div>
                   <div className="edu-place">{e.place}</div>
                   <span className="edu-year">{e.duration}</span>
+                </div>
                 </div>
                 <div className="edu-right">
                   <span className="edu-score">{e.score}</span>

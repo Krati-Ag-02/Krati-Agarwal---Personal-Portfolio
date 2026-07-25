@@ -1,5 +1,18 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import {
+  FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub,
+  FaExchangeAlt, FaRobot, FaChartBar, FaCloud, FaCode, FaPaperclip,
+} from "react-icons/fa";
+import { SiExpress, SiFirebase } from "react-icons/si";
+
+const techIconMap = {
+  "React": FaReact, "Node.js": FaNodeJs, "Express": SiExpress, "Firebase": SiFirebase,
+  "Firebase Auth": SiFirebase, "Firebase Storage": SiFirebase,
+  "LLM APIs": FaRobot, "Grok API": FaRobot, "REST APIs": FaExchangeAlt,
+  "Recharts": FaChartBar, "CSS": FaCss3Alt, "JavaScript": FaJs, "JS": FaJs,
+  "HTML5": FaHtml5, "Git": FaGitAlt, "GitHub": FaGithub,
+};
 
 export const projects = [
   {
@@ -121,7 +134,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-eyebrow">// what I've built</span>
         <h2 className="section-title">My <em className="em-slate">projects</em></h2>
-        <p className="section-note">// hover a card — it opens sideways to the story behind it</p>
+        
       </motion.div>
 
       <div className="project-list">
@@ -132,12 +145,23 @@ export default function Projects() {
             <motion.div
               key={p.title}
               className={`prow${alignRight ? " right" : ""}${isOpen ? " open" : ""}`}
+              style={{ "--proj-color": `var(--${p.accent})`, "--proj-color-deep": `var(--${p.accent}-deep)` }}
               initial={{ opacity: 0, y: 26 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: Math.min(i * 0.05, 0.3) }}
               onClick={() => setOpenIndex((cur) => (cur === i ? null : i))}
             >
-              <div className={`ptile glass`}>
-                <img className="swatch" src={p.image} alt={p.title} loading={i < 2 ? "eager" : "lazy"} />
+              <div className="ptile">
+                <span className="folder-tab-shape"></span>
+                <span className="clip-scrap"></span>
+                <FaPaperclip className="paperclip" size={22} />
+                <div className="device-frame">
+                  <div className="device-bar">
+                    <span className="device-dot red"></span>
+                    <span className="device-dot yellow"></span>
+                    <span className="device-dot green"></span>
+                  </div>
+                  <img className="swatch" src={p.image} alt={p.title} loading={i < 2 ? "eager" : "lazy"} />
+                </div>
                 <div className="cap">
                   <div className="top-row">
                     <span className="sub">{p.subtitle}</span>
@@ -145,14 +169,18 @@ export default function Projects() {
                   <h3>{p.title}</h3>
                   <p className="desc">{p.desc}</p>
                   <div className="tags">
-                    {p.tech.map((t) => <span key={t}>{t}</span>)}
+                    {p.tech.map((t) => {
+                      const Icon = techIconMap[t] || FaCode;
+                      return <span key={t}><Icon size={11} />{t}</span>;
+                    })}
                   </div>
-                  {p.live && (
-                    <a href={p.live} target="_blank" rel="noopener noreferrer" className="live-link"
-                      onClick={(e) => e.stopPropagation()}>
-                      View live ↗
-                    </a>
-                  )}
+                 {p.live && (
+  <a href={p.live} target="_blank" rel="noopener noreferrer" className="live-link btn-sm"
+    style={{ "--btn-accent": `var(--${p.accent})` }}
+    onClick={(e) => e.stopPropagation()}>
+    View live ↗
+  </a>
+)}
                 </div>
               </div>
 
@@ -161,9 +189,10 @@ export default function Projects() {
                 <span className={`prow-num text-${p.accent}`}>{String(i + 1).padStart(2, "0")}</span>
               </div>
 
-              <div className={`pdrawer glass`}>
+              <div className="pdrawer">
                 <div className="pdrawer-inner">
                   <span className={`origin chip-fill-${p.accent}`}>{p.origin}</span>
+                  <div className="story-row"><b>About</b><p>{p.desc}</p></div>
                   <div className="story-row"><b>Context</b><p>{p.story.context}</p></div>
                   <div className="story-row"><b>Built</b><p>{p.story.built}</p></div>
                   <div className="story-row"><b>Next</b><p>{p.story.next}</p></div>
