@@ -17,10 +17,7 @@ export default function Certifications() {
           <span className="section-eyebrow">// credentials</span>
           <h2 className="section-title">Certifi<em className="em-ochre">cations</em></h2>
         </motion.div>
-        <motion.span className="cert-gallery-badge"
-          initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <FaAward size={12} /> Always learning
-        </motion.span>
+      
       </div>
 
       <div className="cert-wrap">
