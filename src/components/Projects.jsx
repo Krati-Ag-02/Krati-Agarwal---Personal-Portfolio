@@ -15,46 +15,69 @@ const techIconMap = {
 };
 
 export const projects = [
-  {
-    title: "CareerGenie",
-    subtitle: "AI Career Platform",
-    origin: "Personal project",
-    desc: "Interview prep, resume analysis, and career guidance, with LLM APIs for real-time question generation and answer evaluation.",
-    story: {
-      context: "Wanted to go beyond a single API call and build a real feature around an LLM — question generation, evaluation, and a full UI around it.",
-      built: "Full-stack app with React, Node.js, Express, and Firebase — resume analysis, mock interview flow, and LLM-based answer evaluation, deployed on Render.",
-      next: "Add basic usage tracking to see which parts people actually use, and tighten the evaluation prompts based on real feedback.",
-    },
+ {
+  title: "CareerGenie",
+  subtitle: "AI Career Platform",
+  origin: "Personal Project • College Major Project",
+
+  desc: "An AI-powered career platform offering resume analysis, interview preparation, and personalized career guidance in one place.",
+
+  about:
+    "CareerGenie is designed as a one-stop platform to support users throughout their job preparation journey. It combines AI-powered resume analysis, role-specific interview preparation, and career guidance to help users understand their current skill level and identify the gaps needed to reach their target role. Resume analysis provides ATS scoring along with detailed improvement suggestions, while the interview module generates role-based questions and evaluates responses in real time using LLM APIs. The goal was to create a practical product that brings multiple career tools together into a single seamless experience.",
+
+  story: {
+    context:
+      "I built CareerGenie as a personal project, which later became my college major project. The idea came from exploring different career tools and realizing that resume reviews, interview preparation, and career guidance were scattered across multiple platforms. I wanted to combine them into a single AI-powered experience.",
+
+    built:
+      "Developed a full-stack application using React, Node.js, Express, Firebase, and LLM APIs. Implemented AI-driven resume analysis, personalized career recommendations, role-based interview question generation, and real-time answer evaluation within an intuitive user interface."
+  },
     tech: ["React", "Node.js", "Express", "Firebase", "LLM APIs"],
     live: "https://careergenie-frontend.onrender.com/",
     image: "/cg.png",
     accent: "sage",
   },
   {
-    title: "Planara",
-    subtitle: "Productivity App",
-    origin: "Hiring assignment, expanded",
-    desc: "Kanban board, calendar, habit tracker, goals, and a Pomodoro timer, with real-time sync via Firebase.",
-    story: {
-      context: "Started as a company's take-home assignment: build a basic task manager.",
-      built: "Took it past the brief — drag-and-drop Kanban, calendar view, habit tracking, goals, and a Pomodoro timer, all synced through Firebase Auth and Firestore.",
-      next: "Add offline support and conflict handling for the real-time sync.",
-    },
+  title: "Planara",
+  subtitle: "Productivity App",
+  origin: "Hiring Assignment • Expanded Independently",
+
+  desc:
+    "A productivity workspace featuring task management, habit tracking, goals, calendar scheduling, and Pomodoro sessions with Firebase sync.",
+
+  about:
+    "Planara began as a simple task management assignment but evolved into a complete productivity application. Along with Kanban task management, it includes calendar scheduling, habit tracking, goal management, and a built-in Pomodoro timer to help users stay organized. Firebase Authentication and Firestore provide secure login and real-time synchronization across the application.",
+
+  story: {
+    context:
+      "The original hiring assignment only required building a basic task manager. Instead of stopping there, I decided to expand it into a more complete productivity platform by adding features people would actually use every day.",
+
+    built:
+      "Built the application using React, CSS, Firebase Authentication, and Firestore. Added drag-and-drop Kanban boards, calendar scheduling, habit tracking, goals, Pomodoro timer, authentication, and real-time data synchronization."
+  },
     tech: ["React", "CSS", "Firebase"],
     live: "https://planara-six.vercel.app/",
     image: "/planara.png",
     accent: "clay",
   },
   {
-    title: "Funhouse",
-    subtitle: "Mini-Games Hub",
-    origin: "Practice project",
-    desc: "11 mini-games in one hub, with Firebase Authentication and Storage for accounts and data persistence.",
-    story: {
-      context: "Built to practice shipping a full app end-to-end — game logic, auth, and cloud storage together, not one isolated feature.",
-      built: "React front end for 11 games, Firebase Auth + Storage for accounts and saved progress, Grok API for a couple of in-game smart features, deployed on Firebase Hosting.",
-      next: "It's a skills showcase more than a product. If extended, I'd focus on one game deeply instead of keeping all 11 shallow.",
-    },
+    title: "FunHouse",
+  subtitle: "Mini-Games Hub",
+  origin: "Personal Project",
+
+  desc:
+    "A collection of 11 interactive mini-games featuring authentication, cloud storage, and engaging gameplay experiences.",
+
+  about:
+    "FunHouse is a collection of eleven browser-based mini-games built to explore different game mechanics while creating something enjoyable to use. Instead of focusing on a single game, the project showcases a variety of gameplay styles combined into one platform. Firebase Authentication and Storage handle user accounts and saved progress, while the project also experiments with API integration for selected game features.",
+
+  story: {
+    context:
+      "I wanted to build something purely for fun while improving my understanding of game logic, state management, and user interaction. Rather than creating another utility application, I chose to build a platform that demonstrates both creativity and technical skills.",
+
+    built:
+      "Developed the platform using React with Firebase Authentication and Storage for user accounts and persistence. Implemented eleven different games, integrated Grok API features where appropriate, and deployed the application using Firebase Hosting."
+  },
     tech: ["React", "Firebase Auth", "Firebase Storage", "Grok API"],
     live: "https://funhouse-f84b4.web.app/",
     image: "/funhouse.png",
@@ -62,14 +85,22 @@ export const projects = [
   },
   {
     title: "Finance Dashboard",
-    subtitle: "Financial Analytics",
-    origin: "Hiring assignment",
-    desc: "Cashflow visualizations, category spend tracking, income/expense filtering, and dark/light themes.",
-    story: {
-      context: "Built as a company's hiring assignment centered on data visualization.",
-      built: "Dashboard with Recharts-based cashflow charts, category spend tracking, dynamic filtering, and a theme toggle.",
-      next: "Wire it up to a real data source instead of static sample data.",
-    },
+  subtitle: "Financial Analytics",
+  origin: "Hiring Assignment • Enhanced Independently",
+
+  desc:
+    "An interactive finance dashboard with analytics, cash flow visualization, spending insights, and customizable themes.",
+
+  about:
+    "The dashboard transforms financial data into clear and interactive visualizations. Users can monitor income, expenses, category-wise spending, and overall cash flow through dynamic charts and filtering options. Originally a simple assignment, it was expanded with additional analytics and UI improvements to create a more complete financial dashboard experience.",
+
+  story: {
+    context:
+      "The hiring assignment initially required only a simple interface for displaying income and expense information. I extended the project by adding richer visualizations and making the dashboard feel closer to a production-ready analytics tool.",
+
+    built:
+      "Built the application using React and Recharts with interactive cash flow charts, spending analytics, category filtering, responsive layouts, and dark/light theme support."
+  },
     tech: ["React", "Recharts", "CSS"],
     live: "https://finance-dashboard-two-flax.vercel.app/",
     image: "/fd.png",
@@ -77,29 +108,46 @@ export const projects = [
   },
   {
     title: "SparkVerse",
-    subtitle: "API Content Hub",
-    origin: "API practice, combined",
-    desc: "Pulls quotes, jokes, riddles, and trivia from multiple external APIs into one interface, with bookmarking and sharing.",
-    story: {
-      context: "Grew out of practicing REST API integration — several small exercises combined into one app instead of left scattered.",
-      built: "Single interface fetching from multiple external APIs, with bookmarking and content sharing.",
-      next: "Add caching so repeat visits don't re-fetch everything.",
-    },
+  subtitle: "API Content Hub",
+  origin: "Personal earning Project",
+
+  desc:
+    "A unified content platform that brings together quotes, jokes, riddles, trivia, and more through multiple external APIs.",
+
+  about:
+    "SparkVerse combines several small API practice projects into a single polished application. Instead of demonstrating individual API integrations separately, it presents multiple content categories through one consistent interface. Features like bookmarking and sharing create an experience that feels like a complete product rather than isolated API demonstrations.",
+
+  story: {
+    context:
+      "While learning REST API integration, I built several small practice projects. Rather than leaving them separate, I decided to merge them into one application that better showcases my frontend development and API integration skills.",
+
+    built:
+      "Developed the application using React and multiple REST APIs with a redesigned interface, bookmarking functionality, content sharing, and responsive layouts."
+  },
     tech: ["React", "REST APIs", "CSS"],
     live: "https://sparkverse-plum.vercel.app/",
     image: "/Sparkverse.png",
     accent: "sage",
   },
   {
-    title: "Chromatic",
-    subtitle: "Memory Game App",
-    origin: "Learning project, refined",
-    desc: "A color sequence memory game with sound effects, multiple modes, score tracking, and a colorblind mode.",
-    story: {
-      context: "Started as a classic Simon-style memory exercise while learning game-state logic in React.",
-      built: "Multiple game modes (Classic, Reverse, Speed Rush), round/streak tracking, sound, and a colorblind-friendly mode.",
-      next: "Add a persistent leaderboard instead of resetting scores per session.",
-    },
+     title: "Chromatic",
+  subtitle: "Memory Game",
+
+  origin: "Learning project • Expanded Independently",
+
+  desc:
+    "A modern memory game inspired by Simon, featuring multiple game modes, sound effects, score tracking, and accessibility options.",
+
+  about:
+    "Chromatic started as a classic Simon-style memory game created while learning React state management. It gradually evolved into a richer experience with multiple gameplay modes, score tracking, sound effects, streaks, and a colorblind-friendly mode. The project focuses on combining engaging gameplay with accessible design.",
+
+  story: {
+    context:
+      "The project began as a simple learning exercise to understand game state and React logic. As I became more comfortable with the implementation, I continued improving the gameplay by introducing new mechanics and accessibility features.",
+
+    built:
+      "Built the game using React and JavaScript with Classic, Reverse, and Speed Rush modes, score tracking, streak system, sound effects, responsive UI, and colorblind accessibility support."
+  },
     tech: ["React", "JavaScript", "CSS"],
     live: "https://chromatic-delta-seven.vercel.app/",
     image: "/Chromatic.png",
@@ -107,14 +155,23 @@ export const projects = [
   },
   {
     title: "BizBucks Landing Page",
-    subtitle: "React UI",
-    origin: "Hiring assignment",
-    desc: "SaaS-style landing page built from a design brief as part of a company's interview process.",
-    story: {
-      context: "Built during a company's hiring process, translating a given design brief into a working responsive UI.",
-      built: "Full responsive landing page in React matching the provided design brief.",
-      next: "Scoped as a UI translation exercise — the deliverable was the UI itself.",
-    },
+  subtitle: "React UI",
+
+  origin: "Hiring Assignment",
+
+  desc:
+    "A responsive SaaS landing page developed from a design brief with attention to layout, responsiveness, and UI consistency.",
+
+  about:
+    "BizBucks is a responsive landing page built from a provided design brief during a company's hiring process. The focus was on accurately translating the design into clean, responsive React components while maintaining consistent spacing, typography, and visual hierarchy across different screen sizes.",
+
+  story: {
+    context:
+      "The project was completed as part of a hiring process where the goal was to convert a provided UI design into a fully responsive web page while maintaining design accuracy.",
+
+    built:
+      "Developed the landing page using React and CSS with responsive layouts, reusable components, and close adherence to the original design specifications."
+  },
     tech: ["React", "CSS", "JS"],
     live: "https://biz-bucks-landing-page.vercel.app/",
     image: "/bb.png",
@@ -195,7 +252,7 @@ export default function Projects() {
                   <div className="story-row"><b>About</b><p>{p.desc}</p></div>
                   <div className="story-row"><b>Context</b><p>{p.story.context}</p></div>
                   <div className="story-row"><b>Built</b><p>{p.story.built}</p></div>
-                  <div className="story-row"><b>Next</b><p>{p.story.next}</p></div>
+                
                 </div>
               </div>
             </motion.div>

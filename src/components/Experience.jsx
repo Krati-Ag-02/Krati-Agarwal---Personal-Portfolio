@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 
 const data = [
   {
-    role: "Full Stack Intern",
-    company: "Vrutsa Solutions",
-    location: "Remote",
-    duration: "May 2026 – Present",
-    active: true,
-    accent: "sage",
-    points: [
-      "Building responsive, reusable React components used in a live production application.",
-      "Shipping frontend features and resolving bugs in a real codebase with daily active users.",
-      "Collaborating via Git — clean commits, pull requests, and code reviews with the team.",
-    ],
-  },
+  role: "Full Stack Intern",
+  company: "Vrutsa Solutions",
+  location: "Remote",
+  duration: "May 2026 – Present",
+  active: true,
+  accent: "sage",
+  points: [
+    "Developing and maintaining full-stack features for a live production application, working across both React frontend and backend functionality.",
+    "Translating Figma designs into responsive, reusable UI components while ensuring consistency across the application.",
+    "Implementing new features, resolving bugs, handling deployments, and collaborating with the team using Git throughout the development workflow.",
+  ],
+},
   {
     role: "Counselling Trainee",
     company: "LawSikho (Addictive Learning)",
