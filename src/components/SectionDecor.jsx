@@ -31,7 +31,7 @@ const DECOR = {
     { el: CurvedArrowDoodle, props: { color: "sage" }, style: { top: "10%", left: "4%" } },
     { el: SparkleDoodle, props: { color: "ochre", size: 22 }, style: { top: "62%", left: "5%" } },
     { el: StarDoodle, props: { color: "clay", size: 20 }, style: { top: "80%", left: "7%" } },
-    { el: MicroQuote, props: { text: "Always creating.", variant: "hand", color: "sage", rotate: -3 }, style: { top: "22%", left: "4%" } },
+  
   ],
   about: [
     { el: DoubleUnderlineDoodle, props: { color: "clay", width: 76 }, style: { top: "5%", right: "10%" } },
@@ -59,7 +59,7 @@ const DECOR = {
     { el: LightningDoodle, props: { color: "ochre" }, style: { bottom: "4%", left: "5%" } },
     { el: ZigzagDoodle, props: { color: "text-soft", width: 54 }, style: { top: "6%", left: "5%" } },
     { el: MicroQuote, props: { text: "Function with elegance.", variant: "mono", color: "slate", rotate: -2 }, style: { bottom: "3%", right: "8%" } },
-    { el: MicroQuote, props: { text: "Every pixel counts.", variant: "mono", color: "clay", rotate: 1 }, style: { top: "42%", left: "4%" } },
+    { el: ScribbleCircleDoodle, props: { color: "slate", size: 40 }, style: { top: "66%", right: "6%" } },
   ],
   education: [
     { el: BookmarkDoodle, props: { color: "ochre" }, style: { top: "8%", right: "12%" } },
