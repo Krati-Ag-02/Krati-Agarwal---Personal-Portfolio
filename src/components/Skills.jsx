@@ -27,7 +27,7 @@ const categories = [
   { title: "Design & tools", color: "var(--slate)", hubIcon: FaPencilRuler, items: ["Figma", "Git", "GitHub", "Vercel", "Render"] },
   { title: "Languages", color: "var(--ochre)", hubIcon: FaLanguage, items: ["C", "C++", "JavaScript"] },
   { title: "Core CS", color: "var(--sage)", hubIcon: FaBrain, items: ["OOPs", "DSA"] },
-  { title: "Soft skills", color: "var(--clay)", hubIcon: FaUserFriends, items: ["Adaptability", "Patience", "Organised"] },
+  { title: "Soft skills", color: "var(--clay)", hubIcon: FaUserFriends, items: ["Adaptability", "Organised", "Patience"] },
 ];
 
 export default function Skills() {
