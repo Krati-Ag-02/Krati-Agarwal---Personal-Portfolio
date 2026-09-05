@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaCode,
-  FaNodeJs, FaDatabase, FaExchangeAlt,
+  FaNodeJs, FaExchangeAlt, FaDatabase,
   FaFigma, FaGitAlt, FaGithub, FaCloud,
   FaProjectDiagram, FaLayerGroup,
   FaSyncAlt, FaHourglassHalf, FaClipboardList,
   FaServer, FaPencilRuler, FaUserFriends,
-  FaLanguage, FaBrain,
+  FaLanguage, FaBrain, FaTerminal,
 } from "react-icons/fa";
-import { SiExpress, SiFirebase, SiVercel, SiCplusplus, SiTailwindcss, SiMui, SiRedux } from "react-icons/si";
+import { SiExpress, SiFirebase, SiVercel, SiCplusplus, SiTailwindcss, SiMui, SiRedux, SiMongodb, SiMysql, SiMongoose } from "react-icons/si";
 
 const iconMap = {
   "HTML5": FaHtml5, "CSS3": FaCss3Alt, "JavaScript": FaJs, "React": FaReact,
   "Bootstrap": FaBootstrap, "EJS": FaCode,
   "Redux Toolkit": SiRedux, "Tailwind CSS": SiTailwindcss, "Material UI": SiMui,
   "Node.js": FaNodeJs, "Express.js": SiExpress, "REST APIs": FaExchangeAlt,
-  "Firebase": SiFirebase, "DBMS": FaDatabase,
+  "Firebase": SiFirebase, "SQL": FaDatabase, "MySQL": SiMysql, "MongoDB": SiMongodb, "Mongoose": SiMongoose, "Mongosh": FaTerminal,
   "Figma": FaFigma, "Git": FaGitAlt, "GitHub": FaGithub, "Vercel": SiVercel, "Render": FaCloud,
   "C": FaCode, "C++": SiCplusplus,
   "OOPs": FaLayerGroup, "DSA": FaProjectDiagram,
@@ -26,7 +26,7 @@ const iconMap = {
 
 const categories = [
   { title: "Frontend", color: "var(--sage)", hubIcon: FaCode, items: ["HTML5", "CSS3", "Redux Toolkit", "Tailwind CSS","EJS","JavaScript", "React", "Material UI", "Bootstrap"] },
-  { title: "Backend", color: "var(--clay)", hubIcon: FaServer, items: ["Node.js", "Express.js", "REST APIs", "Firebase", "DBMS"] },
+  { title: "Backend", color: "var(--clay)", hubIcon: FaServer, items: ["Node.js", "Express.js", "REST APIs", "Firebase", "SQL", "MySQL", "MongoDB", "Mongoose", "Mongosh"] },
   { title: "Design & tools", color: "var(--slate)", hubIcon: FaPencilRuler, items: ["Figma", "Git", "GitHub", "Vercel", "Render"] },
   { title: "Languages", color: "var(--ochre)", hubIcon: FaLanguage, items: ["C", "C++", "JavaScript"] },
   { title: "Core CS", color: "var(--sage)", hubIcon: FaBrain, items: ["OOPs", "DSA"] },

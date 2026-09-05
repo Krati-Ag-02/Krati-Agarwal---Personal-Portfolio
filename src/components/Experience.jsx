@@ -5,8 +5,8 @@ const data = [
   role: "Full Stack Intern",
   company: "Vrutsa Solutions",
   location: "Remote",
-  duration: "May 2026 – Present",
-  active: true,
+  duration: "May 2026 – Aug 2026",
+  active: false,
   accent: "sage",
   points: [
     "Developing and maintaining full-stack features for a live production application, working across both React frontend and backend functionality.",

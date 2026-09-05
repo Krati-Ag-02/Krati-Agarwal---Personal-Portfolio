@@ -73,7 +73,7 @@ export default function Hero() {
           <p className="hero-desc">
             I build modern, responsive web applications with React, Node.js, and
             Firebase—from intuitive user interfaces to complete full-stack
-            solutions. Currently contributing to a production application as a{" "}
+            solutions. Recently contributed to a production application as a{" "}
             <strong>Full-Stack Intern at Vrutsa Solutions</strong>.
           </p>
 

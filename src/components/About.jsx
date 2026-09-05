@@ -35,8 +35,8 @@ export default function About() {
           </p>
 
           <p>
-            I'm currently working as a <strong>Full-Stack Intern at Vrutsa Solutions</strong>,
-            where I contribute to a production application by building React
+            I recently worked as a <strong>Full-Stack Intern at Vrutsa Solutions</strong>,
+            where I contributed to a production application by building React
             features and working across both the frontend and backend. Outside of
             work, I enjoy creating personal projects that help me explore new
             technologies, strengthen my development skills, and turn ideas into
@@ -76,7 +76,7 @@ export default function About() {
           transition={{ delay: 0.15 }}
         >
           <div className="fact-card glass fc1">
-            <div className="flabel">Current Role</div>
+            <div className="flabel">Recent Role</div>
             <div className="fvalue">Full-Stack Intern @ Vrutsa Solutions</div>
           </div>
 
