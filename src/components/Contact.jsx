@@ -91,7 +91,7 @@ export default function Contact() {
 
       <div className="contact-actions-row">
         <a href="mailto:kratiag322004@gmail.com" className="btn btn-solid">Send a message</a>
-        <a href="/Resume_Krati.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+        <a href="/Krati_Resume.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">Resume ↗</a>
       </div>
 
       <p className="contact-footer">Designed & built by Krati Agarwal · React · Deployed on Vercel</p>
