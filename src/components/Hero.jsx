@@ -97,7 +97,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Resume_Krati.pdf"
+              href="/Krati_Resume.pdf"
               className="btn btn-outline"
               target="_blank"
               rel="noopener noreferrer"
